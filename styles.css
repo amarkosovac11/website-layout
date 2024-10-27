@@ -52,16 +52,16 @@ h1, h2, h3 {
 .nav-link {
     color: white; /* Set a consistent color */
     position: relative;
-    text-decoration: none; /* Ensure no underline */
-    transition: color 0.2s; /* Smooth transition for color */
+    text-decoration: none;
+    transition: color 0.2s;
 }
 
 .nav-link:hover {
-    color: white; /* Same hover color */
+    color: white;
 }
 
 .nav-link.active {
-    color: white; /* Same active color */
+    color: white;
 }
 
 .nav-link::after {
@@ -93,32 +93,30 @@ h1, h2, h3 {
 
 @keyframes fadeIn {
     from {
-        opacity: 0; /* Start fully transparent */
+        opacity: 0;
     }
     to {
-        opacity: 1; /* End fully opaque */
+        opacity: 1;
     }
 }
-#section1 {
-    
-    
-}
+
 #section1 h1 {
-    opacity: 0; /* Start hidden */
-    animation: fadeIn 1s ease-in forwards; /* Fade in animation */
-    animation-delay: 0.5s; /* Delay for h1 */
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+    animation-delay: 0.5s;
 }
 
 #section1 p {
-    opacity: 0; /* Start hidden */
-    animation: fadeIn 1s ease-in forwards; /* Fade in animation */
-    animation-delay: 0.5s; /* Same delay for paragraph */
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+    animation-delay: 0.5s;
 }
-
-
 
 .tagline {
     max-width: 800px;
+    text-align: justify;
+    font-size: 1rem;
+    margin: 10px 0 0;
 }
 
 #section1 h1 {
@@ -131,70 +129,51 @@ h1, h2, h3 {
 }
 
 .text-box {
-    background-color: rgba(255, 255, 255, 0.8); /* Slight transparency for effect */
+    background-color: rgba(255, 255, 255, 0.8);
     padding: 20px;
     border-radius: 8px;
-    color: #333; /* Dark text color for readability */
+    color: #333;
 }
 
-/* Section 2 Image Styling - No Transition */
 #section2 .section img {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
-    
-    transition: none; /* No transition effect for images in Section 2 */
+    transition: none;
 }
 
 #section3 {
     justify-content: flex-start;
-    padding: 40px 20px; /* Add padding at the top and bottom */
-    background-color: #203757; /* Or your desired background color */
-    color: #fff; /* Text color */
-    text-align: center; /* Align text to the left */
-    margin-bottom: 0; /* No margin around the section */
+    padding: 40px 20px;
+    background-color: #203757;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 0;
     padding-bottom: 0;
     transform: translateY(48px);
 }
 
 #section3 h2 {
-    margin-top: 0; /* Remove any margin on top */
-    margin-bottom: 30px; /* Space between heading and paragraph */
+    margin-top: 0;
+    margin-bottom: 30px;
 }
 
 #section3 p {
-    margin-bottom: 50px; /* Space between the services text and images */
+    margin-bottom: 50px;
 }
 
-
-
-/* Image Styling for Section 3 Only */
 #section3 .container img {
     width: 13%;
-    height: 90%; /* Maintain aspect ratio */
+    height: 90%;
     object-fit: cover;
     border-radius: 10px;
     border: 2px solid white;
     margin-left: auto;
-    transition: all ease-in-out 0.5s; /* Transition for images in Section 3 */
+    transition: all ease-in-out 0.5s;
 }
 
 #section3 .container img:hover {
-    width: 15%; /* Increase width on hover */
-    
-}
-
-/* Content Styling */
-.company-name {
-    font-size: 3rem;
-    font-weight: bold;
-    
-}
-
-.tagline {
-    text-align: justify;
-    font-size: 1rem;
-    margin: 10px 0 0;
+    width: 15%;
 }
 
 /* Footer Styling */
@@ -206,7 +185,7 @@ h1, h2, h3 {
     color: white;
 }
 
-.socialIcons a{
+.socialIcons a {
     text-decoration: none;
     padding: 10px;
     background-color: #fff;
@@ -219,11 +198,61 @@ h1, h2, h3 {
     align-items: center;
 }
 
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .bg-image {
+        height: 60vh; /* Adjust background image for smaller screens */
+    }
 
+    #section1 h1 {
+        font-size: 2rem;
+    }
 
+    #section1 p {
+        font-size: 0.9rem;
+    }
 
+    #section3 .container img {
+        width: 20%;
+        margin-bottom: 20px; /* Add space between images */
+    }
 
+    .text-box {
+        padding: 15px;
+        font-size: 0.9rem;
+    }
 
+    .company-name {
+        font-size: 2rem;
+    }
 
+    .tagline {
+        font-size: 0.9rem;
+        margin: 5px 0;
+    }
 
+    #section3 p {
+        font-size: 0.9rem;
+    }
 
+    .socialIcons a {
+        width: 35px;
+        height: 35px;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 576px) {
+    #section3 .container img {
+        width: 30%;
+    }
+
+    .navbar-brand img {
+        width: 24px;
+        height: 24px;
+    }
+
+    .navbar {
+        padding: 0 10px;
+    }
+}
