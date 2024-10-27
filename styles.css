@@ -1,0 +1,229 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif; 
+    overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+h1, h2, h3 {
+    font-family: 'Merriweather', serif;
+}
+
+.Logo {
+    transform: translateY(-2px);
+}
+
+.bg-image {
+    opacity: 90%;
+    width: 100vw;
+    height: 50vw;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    filter: brightness(0.6);
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: transparent;
+    transition: background-color 0.5s ease, box-shadow 0.5s ease;
+    z-index: 1; 
+}
+
+.navbar-scrolled {
+    background-color: rgba(26,29,51,255);
+    box-shadow: 0 3px 10px rgba(24, 5, 58, 0.85);
+}
+
+.nav-link {
+    color: white; /* Set a consistent color */
+    position: relative;
+    text-decoration: none; /* Ensure no underline */
+    transition: color 0.2s; /* Smooth transition for color */
+}
+
+.nav-link:hover {
+    color: white; /* Same hover color */
+}
+
+.nav-link.active {
+    color: white; /* Same active color */
+}
+
+.nav-link::after {
+    content: ' ';
+    opacity: 0;
+    transition: all 0.2s;
+    height: 2px;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.nav-link:hover::after {
+    opacity: 1;
+}
+
+/* Section Styling */
+.section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Start fully transparent */
+    }
+    to {
+        opacity: 1; /* End fully opaque */
+    }
+}
+#section1 {
+    
+    
+}
+#section1 h1 {
+    opacity: 0; /* Start hidden */
+    animation: fadeIn 1s ease-in forwards; /* Fade in animation */
+    animation-delay: 0.5s; /* Delay for h1 */
+}
+
+#section1 p {
+    opacity: 0; /* Start hidden */
+    animation: fadeIn 1s ease-in forwards; /* Fade in animation */
+    animation-delay: 0.5s; /* Same delay for paragraph */
+}
+
+
+
+.tagline {
+    max-width: 800px;
+}
+
+#section1 h1 {
+    margin-bottom: 30px;
+}
+
+#section2 h2 {
+    margin-bottom: 20px;
+    color: rgb(69, 69, 69);
+}
+
+.text-box {
+    background-color: rgba(255, 255, 255, 0.8); /* Slight transparency for effect */
+    padding: 20px;
+    border-radius: 8px;
+    color: #333; /* Dark text color for readability */
+}
+
+/* Section 2 Image Styling - No Transition */
+#section2 .section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    
+    transition: none; /* No transition effect for images in Section 2 */
+}
+
+#section3 {
+    justify-content: flex-start;
+    padding: 40px 20px; /* Add padding at the top and bottom */
+    background-color: #203757; /* Or your desired background color */
+    color: #fff; /* Text color */
+    text-align: center; /* Align text to the left */
+    margin-bottom: 0; /* No margin around the section */
+    padding-bottom: 0;
+    transform: translateY(48px);
+}
+
+#section3 h2 {
+    margin-top: 0; /* Remove any margin on top */
+    margin-bottom: 30px; /* Space between heading and paragraph */
+}
+
+#section3 p {
+    margin-bottom: 50px; /* Space between the services text and images */
+}
+
+
+
+/* Image Styling for Section 3 Only */
+#section3 .container img {
+    width: 13%;
+    height: 90%; /* Maintain aspect ratio */
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid white;
+    margin-left: auto;
+    transition: all ease-in-out 0.5s; /* Transition for images in Section 3 */
+}
+
+#section3 .container img:hover {
+    width: 15%; /* Increase width on hover */
+    
+}
+
+/* Content Styling */
+.company-name {
+    font-size: 3rem;
+    font-weight: bold;
+    
+}
+
+.tagline {
+    text-align: justify;
+    font-size: 1rem;
+    margin: 10px 0 0;
+}
+
+/* Footer Styling */
+#footer {
+    position: relative;
+    margin: 0;
+    padding: 10px 20px;
+    background-color: rgb(26,29,51,255);
+    color: white;
+}
+
+.socialIcons a{
+    text-decoration: none;
+    padding: 10px;
+    background-color: #fff;
+    margin: 10px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+
